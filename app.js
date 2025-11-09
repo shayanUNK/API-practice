@@ -7,8 +7,8 @@ function getApi() {
 
   if (xhr.status == 200) {
     title.innerHTML = this.response;
-  }else{
-    console.log("failed");
+  } else {
+    title.innerHTML = "failed";
   }
   xhr.send();
 }
