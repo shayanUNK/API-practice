@@ -2,11 +2,13 @@ let title = document.querySelector("#title");
 let btn = document.querySelector("#btn");
 
 function getApi() {
-  let xhr = XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
   xhr.open("GET", "API.txt");
 
   if (xhr.status == 200) {
     title.innerHTML = this.response;
+  }else{
+    console.log("failed");
   }
   xhr.send();
 }
